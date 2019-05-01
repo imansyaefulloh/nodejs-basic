@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "formidable": "^1.2.1",
     "upper-case": "^1.1.3"
   },
   "devDependencies": {},

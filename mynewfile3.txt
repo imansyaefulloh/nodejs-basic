@@ -1,1 +1,1 @@
-Append this text| Append this text to existing file | Append this text to existing file
+Old content are replaced by this text

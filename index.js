@@ -3,5 +3,6 @@ const dt = require('./mymodule');
 
 http.createServer((req, res) => {
   res.writeHead(200, {'content-type': 'text/html'});
-  res.end('The date and time currently: ' + dt.myDateTime());
+  res.write(req.url);
+  res.end();
 }).listen(3000);

@@ -1,9 +1,11 @@
 const http = require('http');
 const url = require('url');
+const fs = require('fs');
 
 http.createServer((req, res) => {
-  res.writeHead(200, {'content-type': 'text/html'});
-  let q = url.parse(req.url, true).query;
-  let txt = q.year + " " + q.month;
-  res.end(txt);
+  fs.readFile('demofile1.html', (err, data) => {
+    res.writeHead(200, {'content-type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
 }).listen(3000);
